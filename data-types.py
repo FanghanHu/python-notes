@@ -47,7 +47,7 @@ float2 = float(20)
 
 
 #None
-'''TypeTheNone type represents a null object. There is only one None object in the Python environment,andall referencestoNone use that same single instance.'''
+'''TypeTheNone type represents a null object. There is only one None object in the Python environment,andall references to None use that same single instance.'''
 none = None
 none is None #true
 none == None #true
