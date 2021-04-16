@@ -10,6 +10,10 @@ string5 = """'He said: "Hi!"'"""
 string6 = r'raw string without special characters like \n' #\n is interpreted as literal string instead of line break.
 string7 = '\x1A' # Nonprintable characters can be included in a string using a backslash followed by their hex code
 
+#f-string:
+num = 5
+string9 = f"num is {num}" # insert variables into string with f-string.
+
 #string operations
 "123" + "456" # '123456'
 "123" * 3 # '123123123'
