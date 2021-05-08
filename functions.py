@@ -33,3 +33,10 @@ print(next(generator))
 for text in generator:
     print(text)
 # %%
+# Lambda functions pattern:
+# lambda <param1, param2, ...,paramN> : <expression>
+# lambda function returns the result of its expression without the return keyword
+# Some languages allow lambda functions to be arbitrarily complex; however, Python limits you to a single expression.
+triple = lambda num : num * 3
+print(f"triple(3) -> {triple(3)}")
+# %%
