@@ -1,3 +1,4 @@
+# %%
 #str
 #collection of unicode and default encoding is UTF8
 #A literal string at the start of a module, class, or function that is not assigned to a variable is treatedas documentation anddisplayed as part of the built‐in help() output for that object. 
@@ -12,24 +13,37 @@ string7 = '\x1A' # Nonprintable characters can be included in a string using a b
 
 #f-string:
 num = 5
-string9 = f"num is {num}" # insert variables into string with f-string.
+string8 = f"num is {num}" # insert variables into string with f-string.
+
+print(f"string1: {string1}")
+print(f"string2: {string2}")
+print(f"string3: {string3}")
+print(f"string4: {string4}")
+print(f"string5: {string5}")
+print(f"string6: {string6}")
+print(f"string7: {string7}")
+print(f"string8: {string8}")
+# %%
 
 #string operations
-"123" + "456" # '123456'
-"123" * 3 # '123123123'
-"asd".upper() # 'ASD'
-"asd".capitalize() # 'Asd'
-'ASD'.lower() # 'asd'
+print("123" + "456") # '123456'
+print("123" * 3) # '123123123'
+print("asd".upper()) # 'ASD'
+print("asd".capitalize()) # 'Asd'
+print('ASD'.lower()) # 'asd'
 #strip() strips whitespace (the default) or the specifi ed characters from the ends of the string.
-'   haha look at these    white space    !    '.strip() # 'haha look at these    white space    !'
+print('   haha look at these    white space    !    '.strip()) # 'haha look at these    white space    !'
 
+# %%
 
 #bool
 boolean = True
 boolean2 = False
 
+print(boolean)
+print(boolean2)
 
-
+# %%
 #int doesn't have a maximum value unlike other languages
 int1 = 15432487654324537435432465374354321564534357342343576543
 #cast string values into int
@@ -40,7 +54,13 @@ int4 = int(False) #0
 #cast string as hexadecimal number
 int5 = int("0xAB34", 16) #43828
 
+print(int1)
+print(int2)
+print(int3)
+print(int4)
+print(int5)
 
+# %%
 
 #float
 float1 = 1.0
@@ -69,6 +89,11 @@ list1*3 # ['0', '1', '2', '0', '1', '2', '0', '1', '2']
 list1 + ['3', '4'] #['0', '1', '2', '3', '4']
 #list comprehensions. [*inserted_value* for *item* in *iteratble* if *insert_condition*]
 [n for n in range(1, 11) if n%2] # [1, 3, 5, 7, 9]
+
+# in python you can assign multiple variable at once, and all expressions at the right side is evaluated before any assignment happens
+list2 = [0, 1, 2]
+# this will swap 1 and 2
+list2[0], list2[1] = list2[1], list2[0] # [1, 0, 2]
 
 #Tuples, Tuples are immutable
 tuple1 = ('1', '2')
