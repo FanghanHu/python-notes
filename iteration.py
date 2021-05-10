@@ -36,8 +36,8 @@ for num in enumerate(nums):
 #enumerate() takes a second optional argument that specifies the sequence starting number, 
 #which you could use, for example, to indicate the line number in a file, starting with 1 rather than the 0 default
 nums = [1, 2, 3, 4, 5]
-for num in enumerate(nums, 1):
-    print(f"num: {num}")
+for i, num in enumerate(nums, 1):
+    print(f"i: {i}, num: {num}")
 
 # %%
 #Inline loop structures: 
