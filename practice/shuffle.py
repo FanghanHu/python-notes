@@ -24,37 +24,6 @@ def navieShuffle(arr):
         result = temp
     return result
 
-# run the simulation
-arr = ["A", "B", "C", "D", "E", "F"]
-result = navieShuffle(arr)
-
-# setup a dict to count the number of times each item ends up at each position
-count = {}
-for item in arr: 
-    count[item] = [0] * len(arr)
-
-# counting
-for seq in result:
-    for i, c in enumerate(seq):
-        count[c][i] += 1
-
-# print column names
-line = "item"
-for i in range(len(arr)):
-    line += f"\t{i}"
-print(line)
-
-# print number of times for each item ending up in each spot
-for key in count:
-    line = f"{key} : "
-    for n in count[key]:
-        line += f"\t{n}"
-    print(line)
-# %%
-
-def swap(arr, i, j):
-    arr[i], arr[j] = arr[j], arr[i]
-
 def fyStep(arr, i):
     "simulate a step in Fisher-Yates shuffle, returning all possible results"
     results = []
@@ -75,30 +44,35 @@ def fyShuffle(arr):
         result = temp
     return result
 
+def printResult(arr, result):
+    # setup a dict to count the number of times each item ends up at each position
+    count = {}
+    for item in arr: 
+        count[item] = [0] * len(arr)
+    # counting
+    for seq in result:
+        for i, c in enumerate(seq):
+            count[c][i] += 1
+    # print column names
+    line = "item"
+    for i in range(len(arr)):
+        line += f"\t{i}"
+    print(line)
+    # print number of times for each item ending up in each spot
+    for key in count:
+        line = f"{key} : "
+        for n in count[key]:
+            line += f"\t{n}"
+        print(line)
+
 # run the simulation
 arr = ["A", "B", "C", "D", "E", "F"]
+result = navieShuffle(arr)
+print("Navie Shuffle:")
+printResult(arr, result)
+
+print("\nFisher-Yates Shuffle:")
 result = fyShuffle(arr)
+printResult(arr, result)
 
-# setup a dict to count the number of times each item ends up at each position
-count = {}
-for item in arr: 
-    count[item] = [0] * len(arr)
-
-# counting
-for seq in result:
-    for i, c in enumerate(seq):
-        count[c][i] += 1
-
-# print column names
-line = "item"
-for i in range(len(arr)):
-    line += f"\t{i}"
-print(line)
-
-# print number of times for each item ending up in each spot
-for key in count:
-    line = f"{key} : "
-    for n in count[key]:
-        line += f"\t{n}"
-    print(line)
 # %%
